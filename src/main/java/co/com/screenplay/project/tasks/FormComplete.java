@@ -40,8 +40,8 @@ public class FormComplete implements Task {
                 Enter.theValue(middlename).into(INPUT_MIDDLENAME),
                 Enter.theValue(lastname).into(INPUT_LASTNAME),
                Enter.theValue(email).into(INPUT_EMAIL),
-//                Enter.theValue(contactnumber).into(INPUT_CONTACTNUMBER),
-//                Enter.theValue(keywords).into(INPUT_KEYWORDS),
+                Enter.theValue(contactnumber).into(INPUT_CONTACTNUMBER),
+                Enter.theValue(keywords).into(INPUT_KEYWORDS),
                 Click.on(BUTTON_CONSENT),
                 Click.on(BUTTON_SAVE)
         );
@@ -51,6 +51,7 @@ public class FormComplete implements Task {
                         Text.of(EMPLOYEE_NAME),
                         containsString("Angelo Gonzalez Ortega"))
         );
+        waiting(TIME_SHORT);
     }
 
     public static FormComplete formComplete(String firstname, String middlename, String lastname,
